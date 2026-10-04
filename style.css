@@ -1,0 +1,26 @@
+class Main
+{
+    public static void main(String[] args)
+    {
+        int sum = 0;
+        int t = 0;
+        int n1 = 121;
+        int n = n1;
+
+        while(n > 0)
+        {
+            t = n % 10;
+            sum = sum * 10 + t;
+            n = n / 10;
+        }
+
+        if(sum == n1)
+        {
+            System.out.println("palindrome");
+        }
+        else
+        {
+            System.out.println("not a palindrome");
+        }
+    }
+}
