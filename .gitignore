@@ -1,1 +1,3 @@
-/build/
+
+# Ignore local Oracle database credentials
+db.properties
