@@ -63,6 +63,27 @@ public class WatchlistDAO {
 	        e.printStackTrace();
 	    }
 	}
+	public void removeFromWatchlist(int watchlistId) {
+
+	    String sql = "delete from watchlist where watchlist_id = ?";
+
+	    try {
+	        Connection connection = DBconnection.getConnection();
+	        PreparedStatement statement = connection.prepareStatement(sql);
+
+	        statement.setInt(1, watchlistId);
+	        statement.executeUpdate();
+
+	        System.out.println("Removed from watchlist.");
+
+	        statement.close();
+	        connection.close();
+
+	    } catch (Exception e) {
+	        System.out.println("Error removing from watchlist.");
+	        e.printStackTrace();
+	    }
+	}
 	public void deleteByMovieId(int movieId) {
 	    String sql = "delete from watchlist where movie_id = ?";
 
