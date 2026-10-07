@@ -1,3 +1,4 @@
 
 # Ignore local Oracle database credentials
 db.properties
+/build/
